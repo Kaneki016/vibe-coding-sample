@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master the art of Vibe Coding. Orchestrate AI agents, direct codebases, and build premium software at the speed of thought. Join the elite cohort of tech conductors.">
+    <meta name="keywords" content="Vibe Coding, AI coding, agentic development, software engineering, developer flow state, AI agents, cursor, copilot, developer productivity">
+    <meta name="author" content="Vibe Academy">
+    <title>Vibe Coding Masterclass - From Semicolons to Symphony</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Particles -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Cursor Glow Backlight -->
+    <div id="cursor-glow"></div>
+
+    <!-- Header / Navigation -->
+    <header class="navbar" id="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">//</span>VIBE<span class="logo-highlight">CODE</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu-list">
+                <a href="#philosophy" class="nav-link">Philosophy</a>
+                <a href="#playground" class="nav-link">Interactive Playground</a>
+                <a href="#curriculum" class="nav-link">Curriculum</a>
+                <a href="#instructor" class="nav-link">The Conductor</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#apply" class="btn btn-nav-cta" id="nav-cta-btn">Enter Flow State</a>
+                <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav-drawer">
+        <div class="drawer-header">
+            <span class="logo logo-drawer"><span class="logo-accent">//</span>VIBE<span class="logo-highlight">CODE</span></span>
+        </div>
+        <div class="drawer-links">
+            <a href="#philosophy" class="mobile-nav-link">Philosophy</a>
+            <a href="#playground" class="mobile-nav-link">Interactive Playground</a>
+            <a href="#curriculum" class="mobile-nav-link">Curriculum</a>
+            <a href="#instructor" class="mobile-nav-link">The Conductor</a>
+            <a href="#pricing" class="mobile-nav-link">Pricing</a>
+            <a href="#faq" class="mobile-nav-link">FAQ</a>
+        </div>
+        <a href="#apply" class="btn btn-primary mobile-nav-btn">Enter Flow State</a>
+    </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-wrapper">
+                    <span class="hero-badge">⚡ Next Cohort Starts June 1st</span>
+                </div>
+                <h1 class="hero-title">
+                    Stop Writing Code.<br>
+                    <span class="gradient-text">Start Conducting Vibes.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The world's first premium program on agentic software orchestrations. Learn to guide AI developer swarms to build fully scalable SaaS products, elegant visuals, and complex backends—all while staying in the ultimate flow state.
+                </p>
+                <div class="hero-actions">
+                    <a href="#playground" class="btn btn-primary btn-magnetic" id="hero-primary-cta">Start Vibing Free</a>
+                    <a href="#curriculum" class="btn btn-secondary" id="hero-secondary-cta">
+                        Explore Syllabus
+                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-number">10x</span>
+                        <span class="metric-label">Dev Velocity</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-number">95%</span>
+                        <span class="metric-label">Less Boilerplate</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-number">0</span>
+                        <span class="metric-label">Semicolon Stress</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual-wrapper">
+                <div class="hero-card-glow"></div>
+                <div class="hero-visual-card glass-card">
+                    <div class="card-header-bar">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">Vibe-Workspace.app</span>
+                        <span class="window-status"><span class="pulse-indicator"></span> Active Session</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/vibe_coding_hero.png" alt="Futuristic holographic developer conducting code particles" class="hero-image">
+                        <!-- Floating Glass Badges -->
+                        <div class="floating-badge fb-1">
+                            <span class="badge-icon">🚀</span>
+                            <div class="badge-text">
+                                <span class="badge-title">AI Swarm Deployed</span>
+                                <span class="badge-sub">3 subagents syncing...</span>
+                            </div>
+                        </div>
+                        <div class="floating-badge fb-2">
+                            <span class="badge-icon">💎</span>
+                            <div class="badge-text">
+                                <span class="badge-title">Aesthetics Optimized</span>
+                                <span class="badge-sub">Glassmorphism applied</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,55.05,16.32,83.33,22.28,154.27,37.2,228.61,48,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Logo / Trust Banner -->
+    <section class="trust-banner">
+        <div class="container">
+            <p class="banner-title">ALUMNI VIBING AT INDUSTRY LEADERS</p>
+            <div class="logos-grid">
+                <div class="partner-logo"><span>QUANTUM_TECH</span></div>
+                <div class="partner-logo"><span>NEBULA_LABS</span></div>
+                <div class="partner-logo"><span>CYBER_SYS</span></div>
+                <div class="partner-logo"><span>SYNAPSE_AI</span></div>
+                <div class="partner-logo"><span>AETHER_WORK</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Philosophy (The 4 Pillars) -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">CORE PHILOSOPHY</span>
+                <h2 class="section-title">The Pillars of Vibe Coding</h2>
+                <p class="section-desc">
+                    Vibe coding is not about slacking off—it's about elevating your thinking. You stop writing repetitive text, and instead operate at the level of systemic architecture, design aesthetics, and user intent.
+                </p>
+            </div>
+            
+            <div class="pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="pillar-card glass-card">
+                    <div class="pillar-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Architectural Conducting</h3>
+                    <p class="pillar-desc">
+                        Instead of fighting syntax errors, you structure the mental blueprints. Learn how to map databases, frame logical hierarchies, and define clear prompt states so agents execute flawlessly.
+                    </p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="pillar-card glass-card">
+                    <div class="pillar-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21V19C22.9993 18.1137 22.6944 17.2541 22.1314 16.5659C21.5684 15.8778 20.7845 15.4057 19.91 15.22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13C16.8847 3.30832 17.6806 3.78453 18.2503 4.48443C18.82 5.18433 19.1257 6.05436 19.1257 6.955C19.1257 7.85564 18.82 8.72567 18.2503 9.42557C17.6806 10.1255 16.8847 10.6017 16 10.78" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Swarm Orchestration</h3>
+                    <p class="pillar-desc">
+                        Manage multiple agent personas simultaneously. Deploy a database developer, a visual UI specialist, and an extreme optimizer subagent, and watch them collaborate within your workflow.
+                    </p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="pillar-card glass-card">
+                    <div class="pillar-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 5C4 5 1 12 1 12C1 12 4 19 12 19C20 19 23 12 23 12C23 12 20 5 12 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Visual Auditing & Taste</h3>
+                    <p class="pillar-desc">
+                        Coding with AI is all about taste. We teach you how to audit design systems, inject rich animations, detect visual bugs instantly, and polish styling until your application feels ultra-premium.
+                    </p>
+                </div>
+                <!-- Pillar 4 -->
+                <div class="pillar-card glass-card">
+                    <div class="pillar-icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Accelerated Deployment</h3>
+                    <p class="pillar-desc">
+                        Bypass slow dev cycles. Push direct updates, coordinate database migrations automatically, generate full-stack APIs in seconds, and scale from prototype to thousands of users on day one.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Interactive Vibe Terminal -->
+    <section class="playground" id="playground">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">LIVE DEMONSTRATION</span>
+                <h2 class="section-title">Experience the Flow State</h2>
+                <p class="section-desc">
+                    Don't take our word for it. Choose a creative prompt below, and see exactly how an agent acts on your vision. Monitor the cognitive steps, the code produced, and the live interactive result.
+                </p>
+            </div>
+
+            <!-- Terminal Interface with Integrated IDE Workspace Sidebar Explorer -->
+            <div class="terminal-container glass-card" id="vibe-terminal">
+                <!-- Terminal Header Bar -->
+                <div class="terminal-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">antigravity-swarm-orchestrator://workspace-ide</div>
+                    <div class="terminal-actions">
+                        <button class="terminal-action-btn" id="toggle-sidebar-btn" title="Toggle Sidebar (Ctrl+B)">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="9" y1="3" x2="9" y2="21"/>
+                            </svg>
+                        </button>
+                        <button class="terminal-action-btn" id="toggle-preview-btn" title="Toggle Split View">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="12" y1="3" x2="12" y2="21"/>
+                            </svg>
+                        </button>
+                        <span class="badge badge-cyan">SWARM_ACTIVE</span>
+                    </div>
+                </div>
+                
+                <!-- Main IDE Grid Split -->
+                <div class="terminal-ide-layout">
+                    
+                    <!-- Left Sidebar Explorer Pane -->
+                    <div class="terminal-ide-sidebar">
+                        <!-- VS Code style Activity Icon Bar -->
+                        <div class="activity-bar">
+                            <div class="activity-top">
+                                <button class="activity-btn active" title="Explorer">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="9" y1="3" x2="9" y2="21"/>
+                                    </svg>
+                                </button>
+                                <button class="activity-btn" title="AI Swarm Agents">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                        <path d="M2 12h20"/>
+                                    </svg>
+                                </button>
+                                <button class="activity-btn" title="Search Blueprints">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                    </svg>
+                                </button>
+                                <button class="activity-btn" title="Source Control (Git)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="18" r="3"/>
+                                        <circle cx="6" cy="6" r="3"/>
+                                        <circle cx="6" cy="18" r="3"/>
+                                        <path d="M18 15V9a4 4 0 0 0-4-4H9"/>
+                                        <line x1="6" y1="9" x2="6" y2="15"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="activity-bottom">
+                                <button class="activity-btn" title="Settings">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Collapsible File Explorer Directory Tree -->
+                        <div class="file-explorer">
+                            <div class="explorer-header">
+                                <span>EXPLORER: VIBE_SWARM</span>
+                                <span class="explorer-settings-icon">⚙️</span>
+                            </div>
+                            
+                            <div class="explorer-tree">
+                                <!-- Active Blueprints Folder -->
+                                <div class="tree-folder open">
+                                    <div class="folder-title">
+                                        <span class="arrow">▼</span>
+                                        <span class="folder-icon">📂</span>
+                                        <span>active_blueprints</span>
+                                    </div>
+                                    <div class="folder-children">
+                                        <!-- Keep identical selector IDs for plug-and-play JS compatibility -->
+                                        <div class="tree-file active" id="select-card-prompt" data-prompt="card">
+                                            <span class="file-icon">📄</span>
+                                            <span class="file-name">glass_card.css</span>
+                                        </div>
+                                        <div class="tree-file" id="select-synth-prompt" data-prompt="synth">
+                                            <span class="file-icon">🎵</span>
+                                            <span class="file-name">synthwave.css</span>
+                                        </div>
+                                        <div class="tree-file" id="select-chart-prompt" data-prompt="chart">
+                                            <span class="file-icon">📊</span>
+                                            <span class="file-name">stats_chart.css</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Inactive Mock agent files for deep realism -->
+                                <div class="tree-folder open">
+                                    <div class="folder-title">
+                                        <span class="arrow">▼</span>
+                                        <span class="folder-icon">📂</span>
+                                        <span>swarm_orchestras</span>
+                                    </div>
+                                    <div class="folder-children">
+                                        <div class="tree-file muted-file" data-type="agent">
+                                            <span class="file-icon">🤖</span>
+                                            <span class="file-name">orchestrator.json</span>
+                                        </div>
+                                        <div class="tree-file muted-file" data-type="agent">
+                                            <span class="file-icon">🤖</span>
+                                            <span class="file-name">visually_designed.css</span>
+                                        </div>
+                                        <div class="tree-file muted-file" data-type="agent">
+                                            <span class="file-icon">🤖</span>
+                                            <span class="file-name">compiler.js</span>
+                                        </div>
+                                        <div class="tree-file muted-file" data-type="agent">
+                                            <span class="file-icon">🤖</span>
+                                            <span class="file-name">quality_audit.ts</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tree-folder">
+                                    <div class="folder-title font-dark">
+                                        <span class="arrow">▶</span>
+                                        <span class="folder-icon">📁</span>
+                                        <span>deployments</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Main Code Sandbox Area -->
+                    <div class="terminal-ide-main">
+                        <div class="terminal-body">
+                            <!-- User Prompt Prompt Panel -->
+                            <div class="terminal-prompt-row">
+                                <span class="terminal-arrow">&gt;&gt;</span>
+                                <span class="terminal-user-input" id="terminal-input-display">Create a 3D glass card with mouse-tilt mechanics and cyber neon glowing borders.</span>
+                                <span class="caret"></span>
+                            </div>
+
+                            <!-- Agent Thinking Console -->
+                            <div class="terminal-thinking-console" id="thinking-console">
+                                <!-- Filled in dynamically by JS -->
+                            </div>
+
+                            <!-- Split Panel: Code and Live View -->
+                            <div class="terminal-workspace">
+                                <!-- Code Panel -->
+                                <div class="workspace-pane code-pane">
+                                    <div class="pane-header">
+                                        <span>📄 style.css</span>
+                                        <span class="badge badge-purple">CSS</span>
+                                    </div>
+                                    <div class="pane-content">
+                                        <pre><code class="language-css" id="code-content-display">
+/* Code will type out here... */
+                                        </code></pre>
+                                    </div>
+                                </div>
+                                
+                                <!-- Live Preview Panel -->
+                                <div class="workspace-pane preview-pane">
+                                    <div class="pane-header">
+                                        <span>🌐 Live Sandbox Preview</span>
+                                        <span class="badge badge-green">ACTIVE</span>
+                                    </div>
+                                    <div class="pane-content sandbox-bg" id="sandbox-preview-container">
+                                        <!-- Preview widget will render here... -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Curriculum Roadmap -->
+    <section class="curriculum" id="curriculum">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">SYLLABUS & ROADMAP</span>
+                <h2 class="section-title">The Curriculum Blueprint</h2>
+                <p class="section-desc">
+                    Four intensive modules carefully structured to take you from a standard developer to an elite AI Swarm Conductor. Perfect for intermediate to senior engineers, startup founders, and high-agency product developers.
+                </p>
+            </div>
+
+            <div class="curriculum-accordion">
+                <!-- Module 1 -->
+                <div class="accordion-item glass-card" id="mod-1">
+                    <button class="accordion-header" id="accordion-btn-1">
+                        <div class="module-meta">
+                            <span class="module-num">MODULE 01</span>
+                            <h3 class="module-title">The Art of High-Agency Prompting</h3>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="module-details">
+                                <p class="details-text">
+                                    Learn to think in systems rather than boilerplate. Discover how to provide context, constraints, and architecture. Frame ideas in a way that allows AI agents to get it 100% right on the first try.
+                                </p>
+                                <ul class="details-list">
+                                    <li><strong>The Context Matrix:</strong> How to feed complete architectures, database schemas, and styling guidelines to an agent.</li>
+                                    <li><strong>The Prompt as a Compiler:</strong> Structuring instructions logically to avoid agent wandering or recursive mistakes.</li>
+                                    <li><strong>Iterative Refinement:</strong> Techniques for micro-adjusting code with minimum friction.</li>
+                                </ul>
+                            </div>
+                            <div class="module-skills">
+                                <span class="skill-tag">Systemic Contexts</span>
+                                <span class="skill-tag">Prompt Compile</span>
+                                <span class="skill-tag">Context Windowing</span>
+                                <span class="skill-tag">Refinement Loops</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="accordion-item glass-card" id="mod-2">
+                    <button class="accordion-header" id="accordion-btn-2">
+                        <div class="module-meta">
+                            <span class="module-num">MODULE 02</span>
+                            <h3 class="module-title">Multi-Agent Swarm Architectures</h3>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="module-details">
+                                <p class="details-text">
+                                    One agent is good, an interconnected team of specialized agents is unstoppable. Learn how to configure specialized agents (Architect, Stylist, Database Admin, Security Lead) that check each other's work and deliver premium quality.
+                                </p>
+                                <ul class="details-list">
+                                    <li><strong>Designing Agent Personas:</strong> Crafting system profiles with exact responsibilities, libraries, and design rules.</li>
+                                    <li><strong>Swarm Communication:</strong> Establishing feedback loops where agents write, lint, test, and correct their code autonomously.</li>
+                                    <li><strong>Conflict Management:</strong> How to step in as a human director when agents run into circular dependency loops.</li>
+                                </ul>
+                            </div>
+                            <div class="module-skills">
+                                <span class="skill-tag">Agent Persona Crafting</span>
+                                <span class="skill-tag">Swarm Linting</span>
+                                <span class="skill-tag">Autocorrections</span>
+                                <span class="skill-tag">Human-In-The-Loop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="accordion-item glass-card" id="mod-3">
+                    <button class="accordion-header" id="accordion-btn-3">
+                        <div class="module-meta">
+                            <span class="module-num">MODULE 03</span>
+                            <h3 class="module-title">Visual Excellence & Micro-Interactions</h3>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="module-details">
+                                <p class="details-text">
+                                    A great application doesn't just work—it *feels* premium. Elevate your project with rich glassmorphism, responsive grid systems, dynamic color palettes, and micro-animations that respond to the user.
+                                </p>
+                                <ul class="details-list">
+                                    <li><strong>Modern CSS Mastery:</strong> Custom properties, custom grid mechanics, backdrop-filter blurs, and advanced gradient masking.</li>
+                                    <li><strong>Subtle Micro-Animations:</strong> Creating keyframe-based visual loops and JS-assisted magnetic/interactive hover effects.</li>
+                                    <li><strong>Aesthetics Auditing:</strong> Using browser developer tools to inspect and refine generated CSS, keeping layouts clean and premium.</li>
+                                </ul>
+                            </div>
+                            <div class="module-skills">
+                                <span class="skill-tag">CSS Custom Properties</span>
+                                <span class="skill-tag">Backdrop Blurs</span>
+                                <span class="skill-tag">Neon Gradients</span>
+                                <span class="skill-tag">Micro-Animations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="accordion-item glass-card" id="mod-4">
+                    <button class="accordion-header" id="accordion-btn-4">
+                        <div class="module-meta">
+                            <span class="module-num">MODULE 04</span>
+                            <h3 class="module-title">Production Scaling & Agent CI/CD</h3>
+                        </div>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <div class="module-details">
+                                <p class="details-text">
+                                    Bring your vibe projects to real-world scale. Learn how to securely integrate Supabase databases, deploy serverless edge functions, run automated test suites, and establish automated deployment pipelines controlled by AI.
+                                </p>
+                                <ul class="details-list">
+                                    <li><strong>Secure Supabase Integration:</strong> Generating type-safe schemas, configuring RLS, and handling secure token sessions.</li>
+                                    <li><strong>Edge Architectures:</strong> Running Deno functions, edge routing, and caching.</li>
+                                    <li><strong>Agent-Driven CI/CD:</strong> Setting up GitHub Actions where your AI agent automatically checks, runs, and deploys updates.</li>
+                                </ul>
+                            </div>
+                            <div class="module-skills">
+                                <span class="skill-tag">Supabase RLS</span>
+                                <span class="skill-tag">Edge Functions</span>
+                                <span class="skill-tag">GitHub Actions CI/CD</span>
+                                <span class="skill-tag">Database Migrations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: The Instructor (The Conductor) -->
+    <section class="instructor" id="instructor">
+        <div class="container">
+            <div class="instructor-card glass-card">
+                <div class="instructor-image-side">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/vibe_master.png" alt="Futuristic technology mentor, the Vibe Master" class="avatar-img">
+                </div>
+                <div class="instructor-content-side">
+                    <span class="section-tag">YOUR CONDUCTOR</span>
+                    <h2 class="instructor-name">Meet Alex Chen</h2>
+                    <h3 class="instructor-title">Founder, Orchestrator, & Vibe pioneer</h3>
+                    <p class="instructor-bio">
+                        "I spent 12 years grinding syntax, debugging missing commas, and writing repetitive React boilerplate. I was burned out. Then, agentic AI changed everything. I realized that the true value of an engineer isn't in typing code—it's in system vision, aesthetic taste, and logical structure. 
+                    </p>
+                    <p class="instructor-bio">
+                        Today, I orchestrate multi-agent swarms to build and launch fully fledged SaaS products in hours. I don't grind. I flow. I vibe. And in this course, I am sharing the exact blueprints, agents, and strategies to help you do the same."
+                    </p>
+                    <div class="instructor-creds">
+                        <div class="cred-item">
+                            <span class="cred-icon">🎖️</span>
+                            <span class="cred-text">Ex-Lead Architect at Meta</span>
+                        </div>
+                        <div class="cred-item">
+                            <span class="cred-icon">🚀</span>
+                            <span class="cred-text">Built 12+ AI products</span>
+                        </div>
+                        <div class="cred-item">
+                            <span class="cred-icon">💫</span>
+                            <span class="cred-text">50,000+ developer students</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Interactive Pricing & ROI Calculator -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">INVESTMENT & ROI</span>
+                <h2 class="section-title">Select Your Acceleration Level</h2>
+                <p class="section-desc">
+                    Invest in your dev velocity. Vibe coding doesn't make you redundant—it makes you irreplaceable. Calculate how many hours you will reclaim below.
+                </p>
+            </div>
+
+            <!-- ROI Calculator Widget -->
+            <div class="roi-calculator glass-card">
+                <h3 class="roi-title">⚡ Boilerplate Time Saver Calculator</h3>
+                <p class="roi-desc">Drag the slider to represent your estimated target speedup using our multi-agent blueprints, and see how much time you reclaim per week!</p>
+                
+                <div class="calculator-controls">
+                    <div class="slider-wrapper">
+                        <label for="hours-slider" class="slider-label">Current hours spent on coding/debugging per week: <span id="hours-display">40</span> hrs</label>
+                        <input type="range" id="hours-slider" min="10" max="80" value="40" class="custom-slider">
+                    </div>
+                    
+                    <div class="slider-wrapper">
+                        <label for="speedup-slider" class="slider-label">Target Dev Speedup: <span id="speedup-display">3</span>x</label>
+                        <input type="range" id="speedup-slider" min="2" max="10" value="3" class="custom-slider">
+                    </div>
+                </div>
+
+                <div class="calculator-results">
+                    <div class="result-box">
+                        <span class="result-number" id="time-saved-val">26.7</span>
+                        <span class="result-label">Hours Reclaimed / Wk</span>
+                    </div>
+                    <div class="result-box glow-box">
+                        <span class="result-number" id="productivity-val">300%</span>
+                        <span class="result-label">Efficiency Increase</span>
+                    </div>
+                    <div class="result-box">
+                        <span class="result-number" id="yearly-savings-val">$20,800</span>
+                        <span class="result-label">Yearly Value Reclaimed*</span>
+                    </div>
+                </div>
+                <p class="calculator-disclaimer">*Estimated at average tech-market dev rates ($75/hr). Reclaim this time for strategy, product building, or vibing.</p>
+            </div>
+
+            <!-- Pricing Grid -->
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="pricing-card glass-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">The Self-Paced Vibe</h3>
+                        <p class="plan-desc">For developers who want to learn at their own pace with direct blueprints.</p>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="price-val">299</span>
+                            <span class="frequency">/ one-time</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><span class="check">✓</span> 4 modules (25+ HD Video Lessons)</li>
+                            <li><span class="check">✓</span> Downloadable prompt context matrix templates</li>
+                            <li><span class="check">✓</span> Standard agent persona configurations</li>
+                            <li><span class="check">✓</span> Access to our private student Discord</li>
+                            <li><span class="check">✓</span> Lifetime core curriculum updates</li>
+                        </ul>
+                    </div>
+                    <div class="plan-action">
+                        <a href="#apply" class="btn btn-secondary btn-full" data-plan="Self-Paced">Enroll Self-Paced</a>
+                    </div>
+                </div>
+
+                <!-- Plan 2 (Featured) -->
+                <div class="pricing-card glass-card featured">
+                    <div class="featured-badge">💥 COHORT FAVORITE</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">The Conductor Masterclass</h3>
+                        <p class="plan-desc">For high-agency builders ready to command multi-agent swarms in real-time.</p>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="price-val">699</span>
+                            <span class="frequency">/ one-time</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <ul>
+                            <li><span class="check">✓</span> <strong>Everything in Self-Paced plus...</strong></li>
+                            <li><span class="check">✓</span> 6 Weeks of live cohort workshops with Alex</li>
+                            <li><span class="check">✓</span> <strong>Premium Multi-Agent Swarm Sandbox codebase</strong></li>
+                            <li><span class="check">✓</span> Live reviews: Audit your designs & styling via agents</li>
+                            <li><span class="check">✓</span> Exclusive VIP mastermind breakout sessions</li>
+                            <li><span class="check">✓</span> Certificate of Mastery as a Swarm Conductor</li>
+                        </ul>
+                    </div>
+                    <div class="plan-action">
+                        <a href="#apply" class="btn btn-primary btn-full btn-magnetic" data-plan="Conductor Masterclass">Apply for Cohort</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Application Form -->
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="apply-grid">
+                <div class="apply-content-side">
+                    <span class="section-tag">SECURE YOUR SPOT</span>
+                    <h2 class="apply-title">Enter the Vibe State.</h2>
+                    <p class="apply-desc">
+                        Spaces in our live Masterclass cohort are strictly capped at 150 conductors to maintain rich collaborative engagement, peer code audits, and premium mentor feedback.
+                    </p>
+                    <div class="apply-bullet">
+                        <span class="bullet-icon">🔒</span>
+                        <div class="bullet-text">
+                            <h4>Risk-Free Guarantee</h4>
+                            <p>Attend the first two workshops. If you don't feel a 2x speedup immediately, we will issue a full 100% refund.</p>
+                        </div>
+                    </div>
+                    <div class="apply-bullet">
+                        <span class="bullet-icon">💬</span>
+                        <div class="bullet-text">
+                            <h4>Got Questions?</h4>
+                            <p>Send a message on Discord or chat directly with our team in the support corner below.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="apply-form-side">
+                    <div class="form-card glass-card">
+                        <h3 class="form-title">Submit Cohort Application</h3>
+                        <form id="application-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Your Full Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required>
+                                    <span class="error-msg" id="name-error">Please enter your name</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-email">Work Email</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required>
+                                    <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-plan">Select Track</label>
+                                    <select id="form-plan" required>
+                                        <option value="" disabled selected>Choose plan...</option>
+                                        <option value="Self-Paced">The Self-Paced Vibe ($299)</option>
+                                        <option value="Conductor">The Conductor Masterclass ($699)</option>
+                                    </select>
+                                    <span class="error-msg" id="plan-error">Please select a course track</span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-experience">Briefly describe what you want to build</label>
+                                    <textarea id="form-experience" rows="3" placeholder="I want to build a fully automated agentic SaaS for..." required></textarea>
+                                    <span class="error-msg" id="experience-error">Please share what you intend to build</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full btn-submit" id="submit-application">
+                                Submit Application ⚡
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">COMMON QUERIES</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-desc">
+                    Answers to everything you need to know about the transition to modern agentic engineering and flow state development.
+                </p>
+            </div>
+
+            <div class="faq-list">
+                <!-- FAQ 1 -->
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Is this just "prompt engineering" or real software development?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            It is real software development, scaled up. Vibe coding requires strong system architectural understanding, debugging instincts, and aesthetic judgment. We teach you how to specify exact state structures, debug loops, lint styles, and manage multi-agent orchestration, which is vastly more technical than just typing single prompt lines.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>What experience level is recommended?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            This course is designed for individuals who already understand basic software concepts (HTML, CSS, JS, API concepts, database basics). You don't need to be a senior developer, but knowing how code runs, how APIs exchange data, and how styling structures work will help you direct agents effectively.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>What specific tools and frameworks will we learn?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            We will cover advanced orchestration patterns using frameworks and IDE tools like Cursor, GitHub Copilot, Supabase (databases, auth, RLS), Deno Edge Functions, and modern automation tools. You will also learn to write custom orchestrator scripts that execute multi-persona routines locally on your filesystem.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item glass-card">
+                    <button class="faq-question">
+                        <span>Will agentic AI replace developers?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            AI won't replace developers, but developers who master agentic orchestration *will* replace those who only write code manually. By learning to operate as a high-agency conductor rather than a syntax typewriter, you increase your output by a factor of 10, making yourself highly valuable in the modern tech ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-accent">//</span>VIBE<span class="logo-highlight">CODE</span>
+                </a>
+                <p class="brand-text">
+                    Orchestrate code, unlock flow state, build tomorrow's premium interfaces at the speed of thought.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+                    <a href="#" class="social-icon" aria-label="GitHub">⚙️</a>
+                    <a href="#" class="social-icon" aria-label="Discord">👾</a>
+                    <a href="#" class="social-icon" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Syllabus</h4>
+                <a href="#philosophy">Pillars</a>
+                <a href="#playground">Playground</a>
+                <a href="#curriculum">Module Roadmap</a>
+                <a href="#instructor">The Conductor</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>Academy</h4>
+                <a href="#pricing">Course Pricing</a>
+                <a href="#apply">Apply Cohort</a>
+                <a href="#faq">FAQ</a>
+                <a href="#">Support Corner</a>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Join the Conductor Circle</h4>
+                <p>Get weekly high-agency developer blueprints and multi-agent workflow snippets.</p>
+                <form class="newsletter-form" id="newsletter-form" novalidate>
+                    <input type="email" id="newsletter-email" placeholder="vibe@conductor.app" required>
+                    <button type="submit" class="btn btn-primary newsletter-btn">Join</button>
+                </form>
+                <span class="newsletter-msg" id="newsletter-msg"></span>
+            </div>
+        </div>
+        
+        <div class="container copyright-bar">
+            <p>&copy; 2026 VIBE CODE Academy. All rights reserved. Created by Antigravity in pair-programming with developer.</p>
+            <p class="designer-text">Crafted with Glassmorphism, CSS Custom Variables & Canvas Particle Swarms.</p>
+        </div>
+    </footer>
+
+    <!-- Canvas Confetti Elements -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Custom success dialog -->
+    <div class="success-modal-overlay" id="success-modal">
+        <div class="success-modal-card glass-card">
+            <div class="modal-glowing-ring"></div>
+            <div class="modal-icon">🚀</div>
+            <h3 class="modal-title">Application Received!</h3>
+            <p class="modal-text">You have successfully initiated your transition to a Swarm Conductor. Our system has cataloged your profile, and the Vibe Master Alex is reviewing your application details.</p>
+            <p class="modal-text font-cyan">Watch your inbox for the welcome transmission and orientation workflow links within 24 hours.</p>
+            <button class="btn btn-primary modal-close" id="modal-close-btn">Sync and Enter flow state</button>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
