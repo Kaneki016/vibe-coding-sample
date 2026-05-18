@@ -1,20 +1,53 @@
-# //VIBECODE Masterclass — Landing Page
+# Vibe Coding — Landing Pages
 
-A premium, fully static landing page for the **Vibe Coding Masterclass** — a course on agentic software orchestration and AI-assisted development. Built with vanilla HTML, CSS, and JavaScript; no frameworks, no build tools.
+A collection of numbered landing page projects, each self-contained in its own folder. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools.
 
-## Project Structure
+## Projects
+
+| # | Folder | Description | Status |
+|---|---|---|---|
+| 01 | [`01-vibe-coding/`](./01-vibe-coding/) | Vibe Coding Masterclass — agentic software orchestration course | Live |
+| 02 | [`02-luxury-realestate/`](./02-luxury-realestate/) | LUMIÈRE — Ultra luxury real estate showcase | Live |
+
+## Repository Structure
 
 ```
 vibe-coding-sample/
-├── index.html          # Full single-page layout (all sections)
-├── style.css           # Design system + all component styles
-├── app.js              # All interactive logic (vanilla JS)
-└── assets/
-    ├── vibe_coding_hero.png   # Hero section image
-    └── vibe_master.png        # Instructor avatar
+├── 01-vibe-coding/
+│   ├── index.html          # Full single-page layout
+│   ├── style.css           # Design system + component styles
+│   ├── app.js              # All interactive logic
+│   └── assets/
+│       ├── vibe_coding_hero.png
+│       └── vibe_master.png
+├── 02-next-project/
+│   └── index.html          # Placeholder
+└── README.md
 ```
 
-## Page Sections
+Each project folder is fully independent — no shared dependencies between projects.
+
+## Running a Project Locally
+
+Open any project's `index.html` directly in a browser, or serve with a static file server from the project root:
+
+```bash
+# Python — serve project 01
+python -m http.server 8080 --directory 01-vibe-coding
+
+# Node.js (npx) — serve project 01
+npx serve 01-vibe-coding
+```
+
+---
+
+## 01 — Vibe Coding Masterclass
+
+**Folder:** `01-vibe-coding/`
+
+A premium dark-mode landing page for a course on AI-assisted/agentic software development.
+
+### Page Sections
 
 | Section | ID | Description |
 |---|---|---|
@@ -29,33 +62,27 @@ vibe-coding-sample/
 | Apply | `#apply` | Cohort application form with confetti on submit |
 | FAQ | `#faq` | Expandable FAQ accordion |
 
-## Key Features
+### Key Features
 
-### Interactive AI Terminal Playground
-The centerpiece of the page — a simulated VS Code-style IDE workspace (`app.js: setupVibeTerminal`) that demonstrates three live demo modes selectable from the sidebar file explorer:
+**Interactive AI Terminal Playground**
+A simulated VS Code-style IDE workspace with three selectable demo modes:
+- `glass_card.css` — 3D glassmorphic payment card with mouse-tilt mechanics
+- `synthwave.css` — Cyberpunk audio visualizer with toggle-able animated bars
+- `stats_chart.css` — Glassmorphic dashboard chart with animated bar fill
 
-- **`glass_card.css`** — 3D glassmorphic payment card with mouse-tilt mechanics
-- **`synthwave.css`** — Cyberpunk audio visualizer player with toggle-able animated bars
-- **`stats_chart.css`** — Glassmorphic dashboard analytics chart with animated bar fill
+Each mode runs: typed prompt → AI agent thinking logs → typewriter code output → live interactive widget.
 
-Each mode plays through: typed user prompt → sequential AI agent "thinking" logs → typewriter code output → rendered interactive widget preview.
+`Ctrl+B` / `Cmd+B` toggles the sidebar while the terminal is in view.
 
-Keyboard shortcut `Ctrl+B` (or `Cmd+B`) toggles the sidebar while the terminal is in the viewport.
+**ROI Calculator** — dual-slider widget computing hours reclaimed, efficiency gain, and yearly value.
 
-### ROI Calculator
-Dual-slider widget (`app.js: setupROICalculator`) that computes hours reclaimed per week, efficiency increase percentage, and estimated yearly value based on current coding hours and target speedup multiplier.
+**Canvas Animations** — particle network background (60 particles, mouse-repelled), cursor glow, and physics-based confetti on form submit.
 
-### Canvas Animations
-- **Particle network** (`setupParticlesBg`) — 60 particles connected by proximity lines, mouse-repelled
-- **Cursor glow** (`setupCursorGlow`) — Radial violet/cyan gradient that follows the cursor
-- **Confetti engine** (`launchConfetti`) — Physics-based confetti shot from both bottom corners on successful form submission
+**Form Validation** — inline field errors, 1.5s async simulation, success modal. Clicking a pricing plan pre-selects the form dropdown.
 
-### Form & Validation
-Application form (`setupApplicationForm`) with inline field-level error states, a 1.5s async simulation, and a success modal overlay. Selecting a pricing plan from the pricing cards automatically pre-selects the corresponding dropdown.
+### Design System
 
-## Design System
-
-Defined entirely via CSS custom properties in `:root` (`style.css:7`):
+CSS custom properties defined in `style.css:7` (`:root`):
 
 | Token | Value | Usage |
 |---|---|---|
@@ -66,28 +93,16 @@ Defined entirely via CSS custom properties in `:root` (`style.css:7`):
 | `--glass-bg` | `rgba(255,255,255,0.02)` | Card background |
 | `--glass-blur` | `16px` | Backdrop blur on glass cards |
 
-Typography uses **Space Grotesk** (headings) and **Plus Jakarta Sans** (body) via Google Fonts.
+Typography: **Space Grotesk** (headings) + **Plus Jakarta Sans** (body) via Google Fonts.
 
-## Responsive Breakpoints
+### Responsive Breakpoints
 
-| Breakpoint | Layout changes |
+| Breakpoint | Changes |
 |---|---|
 | `≤ 1024px` | Single-column hero, stacked instructor/pricing/apply grids |
 | `≤ 768px` | Hamburger nav, stacked terminal workspace, single-column calculator and footer |
 
-## Running Locally
-
-No dependencies to install. Open `index.html` directly in a browser, or serve with any static file server:
-
-```bash
-# Python
-python -m http.server 8080
-
-# Node.js (npx)
-npx serve .
-```
-
-## Pricing Tiers
+### Pricing Tiers
 
 | Plan | Price | Highlights |
 |---|---|---|

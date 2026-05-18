@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUMIÈRE — Curating the world's most exceptional properties for discerning clients. Ultra luxury real estate redefined.">
+    <title>LUMIÈRE — Ultra Luxury Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Floating Particles Canvas -->
+    <canvas id="ambient-canvas"></canvas>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                LUMIÈRE
+                <span class="logo-sub">EST. MMXXIV</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#properties" class="nav-link">Properties</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#testimonials" class="nav-link">Stories</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-outline">Book Consultation</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#properties" class="mobile-link">Properties</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#testimonials" class="mobile-link">Stories</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#contact" class="btn btn-primary mobile-cta">Book Consultation</a>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+        <div class="hero-backdrop" id="hero-backdrop">
+            <div class="arch-scene">
+                <div class="arch-sky"></div>
+                <div class="arch-glow-orb"></div>
+                <div class="arch-building b5"></div>
+                <div class="arch-building b3"></div>
+                <div class="arch-building b4"></div>
+                <div class="arch-building b1"></div>
+                <div class="arch-building b2"></div>
+                <div class="arch-ground"></div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-container">
+            <div class="hero-content reveal-up">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-line"></span>
+                    <span class="eyebrow-text">Ultra Luxury Real Estate</span>
+                </div>
+                <h1 class="hero-title">
+                    Where Exceptional<br>
+                    <em>Addresses</em> Live
+                </h1>
+                <p class="hero-subtitle">
+                    We curate the world's most prestigious properties for clients who demand nothing less than extraordinary. Private islands to sky residences — this is your next chapter.
+                </p>
+                <div class="hero-actions">
+                    <a href="#properties" class="btn btn-primary">Explore Collection</a>
+                    <a href="#contact" class="btn btn-ghost">Private Consultation</a>
+                </div>
+            </div>
+
+            <div class="hero-search-card reveal-up">
+                <h3 class="search-title">Find Your Residence</h3>
+                <div class="search-form">
+                    <div class="search-field">
+                        <label>Destination</label>
+                        <select>
+                            <option value="">Any Location</option>
+                            <option>Monaco, Côte d'Azur</option>
+                            <option>Maldives, Indian Ocean</option>
+                            <option>New York, USA</option>
+                            <option>Dubai, UAE</option>
+                            <option>Tuscany, Italy</option>
+                            <option>Santorini, Greece</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Property Type</label>
+                        <select>
+                            <option value="">All Types</option>
+                            <option>Sky Penthouse</option>
+                            <option>Private Villa</option>
+                            <option>Waterfront Estate</option>
+                            <option>Private Island</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label>Investment Range</label>
+                        <select>
+                            <option value="">No Limit</option>
+                            <option>$2M – $5M</option>
+                            <option>$5M – $10M</option>
+                            <option>$10M – $25M</option>
+                            <option>$25M+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary search-btn">Search Collection</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="scroll-line"></span>
+            <span class="scroll-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- ============ STATS STRIP ============ -->
+    <section class="stats-strip" id="stats">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <div class="stat-number-row">
+                    <span class="stat-num" data-target="2400">0</span>
+                    <span class="stat-suffix">+</span>
+                </div>
+                <span class="stat-label">Properties Transacted</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number-row">
+                    <span class="stat-num" data-target="47">0</span>
+                </div>
+                <span class="stat-label">Countries Served</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number-row">
+                    <span class="stat-prefix">$</span>
+                    <span class="stat-num" data-target="12">0</span>
+                    <span class="stat-suffix">B+</span>
+                </div>
+                <span class="stat-label">Portfolio Under Management</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number-row">
+                    <span class="stat-num" data-target="98">0</span>
+                    <span class="stat-suffix">%</span>
+                </div>
+                <span class="stat-label">Client Retention</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FEATURED PROPERTIES ============ -->
+    <section class="properties" id="properties">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Curated Collection</span>
+                <h2 class="section-title">Signature Residences</h2>
+                <p class="section-desc">Each property is hand-selected for its architectural distinction, location prestige, and enduring investment potential.</p>
+            </div>
+
+            <div class="filter-tabs reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="penthouse">Penthouse</button>
+                <button class="filter-btn" data-filter="villa">Villa</button>
+                <button class="filter-btn" data-filter="waterfront">Waterfront</button>
+                <button class="filter-btn" data-filter="island">Private Island</button>
+            </div>
+
+            <div class="properties-grid" id="properties-grid">
+
+                <div class="property-card reveal-up" data-category="penthouse">
+                    <div class="property-image img-penthouse-1">
+                        <div class="property-badge">NEW</div>
+                        <div class="property-tag">Penthouse</div>
+                        <div class="property-actions">
+                            <button class="prop-btn" title="Save">♡</button>
+                            <button class="prop-btn" title="View">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$18,500,000</div>
+                        <h3 class="property-name">The Solaris Penthouse</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> One Central, Dubai, UAE</p>
+                        <div class="property-specs">
+                            <span>6 Beds</span><span class="dot">·</span>
+                            <span>7 Baths</span><span class="dot">·</span>
+                            <span>8,400 sq ft</span><span class="dot">·</span>
+                            <span>Full Floor</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Request Private Viewing</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal-up" data-category="villa" style="animation-delay:0.08s">
+                    <div class="property-image img-villa-1">
+                        <div class="property-tag">Villa</div>
+                        <div class="property-actions">
+                            <button class="prop-btn">♡</button>
+                            <button class="prop-btn">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$34,200,000</div>
+                        <h3 class="property-name">Villa Bellezza</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> Tuscany Hills, Florence, Italy</p>
+                        <div class="property-specs">
+                            <span>8 Beds</span><span class="dot">·</span>
+                            <span>9 Baths</span><span class="dot">·</span>
+                            <span>12,800 sq ft</span><span class="dot">·</span>
+                            <span>20 ac Estate</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Request Private Viewing</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal-up" data-category="waterfront" style="animation-delay:0.16s">
+                    <div class="property-image img-waterfront-1">
+                        <div class="property-badge exclusive">EXCLUSIVE</div>
+                        <div class="property-tag">Waterfront</div>
+                        <div class="property-actions">
+                            <button class="prop-btn">♡</button>
+                            <button class="prop-btn">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$27,900,000</div>
+                        <h3 class="property-name">Horizon Crest Estate</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> Côte d'Azur, Monaco</p>
+                        <div class="property-specs">
+                            <span>5 Beds</span><span class="dot">·</span>
+                            <span>6 Baths</span><span class="dot">·</span>
+                            <span>7,200 sq ft</span><span class="dot">·</span>
+                            <span>Private Dock</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Request Private Viewing</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal-up" data-category="island" style="animation-delay:0.12s">
+                    <div class="property-image img-island-1">
+                        <div class="property-badge rare">RARE</div>
+                        <div class="property-tag">Private Island</div>
+                        <div class="property-actions">
+                            <button class="prop-btn">♡</button>
+                            <button class="prop-btn">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$68,000,000</div>
+                        <h3 class="property-name">Isla Dorada</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> Maldives, Indian Ocean</p>
+                        <div class="property-specs">
+                            <span>12 Villas</span><span class="dot">·</span>
+                            <span>Private Beach</span><span class="dot">·</span>
+                            <span>45 ac Island</span><span class="dot">·</span>
+                            <span>Heli-Pad</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Request Private Viewing</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal-up" data-category="penthouse" style="animation-delay:0.2s">
+                    <div class="property-image img-penthouse-2">
+                        <div class="property-tag">Penthouse</div>
+                        <div class="property-actions">
+                            <button class="prop-btn">♡</button>
+                            <button class="prop-btn">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$22,750,000</div>
+                        <h3 class="property-name">The Observatory</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> Central Park West, New York, USA</p>
+                        <div class="property-specs">
+                            <span>5 Beds</span><span class="dot">·</span>
+                            <span>5.5 Baths</span><span class="dot">·</span>
+                            <span>6,100 sq ft</span><span class="dot">·</span>
+                            <span>Rooftop Terrace</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Request Private Viewing</a>
+                    </div>
+                </div>
+
+                <div class="property-card reveal-up" data-category="villa" style="animation-delay:0.24s">
+                    <div class="property-image img-villa-2">
+                        <div class="property-badge sold">SOLD</div>
+                        <div class="property-tag">Villa</div>
+                        <div class="property-actions">
+                            <button class="prop-btn">♡</button>
+                            <button class="prop-btn">⊙</button>
+                        </div>
+                    </div>
+                    <div class="property-body">
+                        <div class="property-price">$41,000,000</div>
+                        <h3 class="property-name">Maison Étoile</h3>
+                        <p class="property-location"><span class="loc-dot">◎</span> Saint-Jean-Cap-Ferrat, France</p>
+                        <div class="property-specs">
+                            <span>10 Beds</span><span class="dot">·</span>
+                            <span>11 Baths</span><span class="dot">·</span>
+                            <span>15,200 sq ft</span><span class="dot">·</span>
+                            <span>Wine Cave</span>
+                        </div>
+                        <a href="#contact" class="btn btn-card">Enquire About Similar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center reveal-up">
+                <a href="#contact" class="btn btn-outline btn-lg">View Full Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-layout">
+                <div class="services-content reveal-up">
+                    <span class="section-tag">Our Expertise</span>
+                    <h2 class="section-title">A Lifetime of Service.<br><em>Not Just a Transaction.</em></h2>
+                    <p class="services-desc">From the first conversation to decades of portfolio management, LUMIÈRE is your trusted partner at every milestone in your property journey.</p>
+                    <a href="#contact" class="btn btn-primary">Begin the Conversation</a>
+                </div>
+                <div class="services-cards">
+                    <div class="service-card reveal-up">
+                        <div class="service-icon">◈</div>
+                        <h3 class="service-title">Acquisition Advisory</h3>
+                        <p class="service-desc">Exclusive off-market access to the world's most coveted properties, tailored to your lifestyle and investment goals.</p>
+                    </div>
+                    <div class="service-card reveal-up" style="animation-delay:0.08s">
+                        <div class="service-icon">◈</div>
+                        <h3 class="service-title">Portfolio Management</h3>
+                        <p class="service-desc">Comprehensive asset management for global real estate portfolios, maximizing value with white-glove discretion.</p>
+                    </div>
+                    <div class="service-card reveal-up" style="animation-delay:0.16s">
+                        <div class="service-icon">◈</div>
+                        <h3 class="service-title">Investment Strategy</h3>
+                        <p class="service-desc">Data-driven intelligence to identify emerging luxury markets and high-yield opportunities before they surface publicly.</p>
+                    </div>
+                    <div class="service-card reveal-up" style="animation-delay:0.24s">
+                        <div class="service-icon">◈</div>
+                        <h3 class="service-title">Private Concierge</h3>
+                        <p class="service-desc">From legal structures to design teams, our concierge coordinates every detail of your purchase and beyond.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="section-tag">Client Voices</span>
+                <h2 class="section-title">Stories of Extraordinary Living</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">LUMIÈRE didn't just find us a property. They found us a life. Our Monaco estate exceeded every expectation, and the process was seamless from first call to keys.</p>
+                    <div class="quote-author">
+                        <div class="author-avatar">MV</div>
+                        <div class="author-info">
+                            <span class="author-name">Marc & Véronique D.</span>
+                            <span class="author-loc">Monaco, Côte d'Azur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="animation-delay:0.1s">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">In 20 years of property acquisition across three continents, I've never encountered an agency with LUMIÈRE's combination of discretion, reach, and genuine care.</p>
+                    <div class="quote-author">
+                        <div class="author-avatar">JA</div>
+                        <div class="author-info">
+                            <span class="author-name">James A.</span>
+                            <span class="author-loc">CEO, Aurelian Capital Group</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up" style="animation-delay:0.2s">
+                    <div class="quote-mark">"</div>
+                    <p class="quote-text">The Maldives island we acquired through LUMIÈRE is not just our home — it's our legacy. They understood our vision and made the impossible, inevitable.</p>
+                    <div class="quote-author">
+                        <div class="author-avatar">ST</div>
+                        <div class="author-info">
+                            <span class="author-name">Sophia T.</span>
+                            <span class="author-loc">Isla Dorada, Maldives</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info reveal-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="contact-title">Begin Your Journey<br>to Extraordinary</h2>
+                <p class="contact-desc">Every exceptional acquisition begins with a private conversation. Tell us your vision, and we will make it a reality.</p>
+                <div class="contact-details">
+                    <div class="contact-detail">
+                        <span class="detail-label">Global Headquarters</span>
+                        <span class="detail-value">1 Avenue Princesse Grace, Monaco</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="detail-label">Private Line</span>
+                        <span class="detail-value">+377 99 000 0000</span>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="detail-label">Confidential Enquiries</span>
+                        <span class="detail-value">private@lumiere.estate</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-card reveal-up">
+                <h3 class="form-title">Private Consultation Request</h3>
+                <form id="contact-form" novalidate>
+                    <div class="form-row two-col">
+                        <div class="form-group" id="fg-first">
+                            <label>First Name</label>
+                            <input type="text" id="f-first" placeholder="Alexander" required>
+                            <span class="field-error">Required</span>
+                        </div>
+                        <div class="form-group" id="fg-last">
+                            <label>Last Name</label>
+                            <input type="text" id="f-last" placeholder="Laurent" required>
+                            <span class="field-error">Required</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="fg-email">
+                            <label>Email Address</label>
+                            <input type="email" id="f-email" placeholder="alexander@email.com" required>
+                            <span class="field-error">Valid email required</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="fg-budget">
+                            <label>Investment Range</label>
+                            <select id="f-budget" required>
+                                <option value="" disabled selected>Select range…</option>
+                                <option>$2M – $5M</option>
+                                <option>$5M – $10M</option>
+                                <option>$10M – $25M</option>
+                                <option>$25M – $50M</option>
+                                <option>$50M+</option>
+                            </select>
+                            <span class="field-error">Required</span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" id="fg-message">
+                            <label>Your Vision</label>
+                            <textarea id="f-message" rows="3" placeholder="Describe your ideal residence or investment vision…" required></textarea>
+                            <span class="field-error">Required</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Submit Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">LUMIÈRE</a>
+                <p class="footer-tagline">Curating Extraordinary Addresses<br>for Extraordinary Lives.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">◎</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">⊞</a>
+                    <a href="#" class="social-link" aria-label="X">✕</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Properties</h4>
+                <a href="#">Sky Penthouses</a>
+                <a href="#">Private Villas</a>
+                <a href="#">Waterfront Estates</a>
+                <a href="#">Private Islands</a>
+                <a href="#">Off-Market</a>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <a href="#">Acquisition Advisory</a>
+                <a href="#">Portfolio Management</a>
+                <a href="#">Investment Strategy</a>
+                <a href="#">Private Concierge</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About LUMIÈRE</a>
+                <a href="#">Our Team</a>
+                <a href="#">Press</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© 2026 LUMIÈRE Estate. All rights reserved.</p>
+                <p class="built-with">Built with Vibe Coding ⚡</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Toast -->
+    <div class="toast" id="success-toast">
+        <span class="toast-icon">✓</span>
+        <span>Enquiry received. We'll be in touch within 24 hours.</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
